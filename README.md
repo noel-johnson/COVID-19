@@ -1,5 +1,5 @@
 # COVID-19 Tracker
-A Cross-platform application to track current corona virus cases all over the World
+A Cross-platform application to track current coronavirus cases all over the World
 
 ## Getting started
 Use `git clone` to clone the repository.
