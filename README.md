@@ -7,6 +7,9 @@ Use `git clone` to clone the repository.
 ## Installing
 Run `npm install` to install all necessary packages.
 
+# Preview
+<img src="/images/ss1.jpg" width="200"> <img src="/images/ss2.jpg" width="200">
+
 ## Built With
 * [Ionic Framework -5](https://ionicframework.com/) - Open-source SDK for hybrid mobile app development
 * [Capacitor](https://capacitor.ionicframework.com/) - The Native Bridge for Cross-Platform Web Apps
@@ -26,4 +29,5 @@ Please make sure to update tests as appropriate.
 
 ## Using
 Please give credits if using this project :+1:
+
 
