@@ -44,7 +44,7 @@ $ sudo yum install epel-release
 $ sudo dnf install nodejs npm
 ```
 
-- [Ionic](https://ionicframework.com) & - [Capacitor](https://capacitor.ionicframework.com/)
+- [Ionic](https://ionicframework.com) & [Capacitor](https://capacitor.ionicframework.com/)
 
 ```console
 $ npm install -g @ionic/cli
@@ -56,7 +56,7 @@ $ npm install --save @capacitor/core @capacitor/cli
 - [Gradle](https://gradle.org/)
 
 ## Built With
-* [Ionic Framework -5](https://ionicframework.com/) - Open-source SDK for hybrid mobile app development
+* [Ionic Framework 5](https://ionicframework.com/) - Open-source SDK for hybrid mobile app development
 * [Capacitor](https://capacitor.ionicframework.com/) - The Native Bridge for Cross-Platform Web Apps
 
 ## Author
