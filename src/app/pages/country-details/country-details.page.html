@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tab2"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-card *ngIf="information">
+  <ion-card-header>
+    <ion-card-title>
+    <h1>{{information.country}}</h1>
+    </ion-card-title>
+      <h4 style="color: #fff;"><b>Today: {{information.todayCases}}</b></h4>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <h4>Known Cases: <br>{{information.cases}}</h4>
+        </ion-col>
+        <ion-col>
+          <h4>Active Cases: <br>{{information.active}}</h4>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <h4>Total Deaths: <br>{{information.deaths}}</h4>
+        </ion-col>
+        <ion-col>
+          <h4>Deaths Today: <br>{{information.todayDeaths}}</h4>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <h4>Recovered: <br>{{information.recovered}}</h4>
+        </ion-col>
+        <ion-col>
+          <h4>Critical: <br>{{information.critical}}</h4>
+        </ion-col>
+      </ion-row>
+      <hr style="color: #fff;"*ngIf="information.country!='World'">
+      <ion-row *ngIf="information.country!='World'">
+        <h4>&nbsp;Total Test Cases: {{information.totalTests}}</h4>
+      </ion-row>
+    </ion-grid>
+  </ion-card-header>
+
+</ion-card>
+</ion-content>

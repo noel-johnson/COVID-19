@@ -1,0 +1,8 @@
+{
+  "appId": "com.vader.app",
+  "appName": "COVID-19",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "cordova": {}
+}
