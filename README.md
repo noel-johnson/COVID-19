@@ -68,8 +68,6 @@ You can also request for a feature [here](https://github.com/noel3225/COVID-19/i
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-Please make sure to update tests as appropriate.
-
 ### Acknowledgments
 * www.worldometers.info
 * Inspired by javieraviles
