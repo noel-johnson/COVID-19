@@ -7,7 +7,7 @@ Use `git clone` to clone the repository.
 ## Installing
 Run `npm install` to install all necessary packages.
 
-# Preview
+## Preview
 <img src="/images/ss1.jpg" width="200"> <img src="/images/ss2.jpg" width="200">
 
 ## Built With
