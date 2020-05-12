@@ -6,77 +6,91 @@
   </ion-toolbar>
 </ion-header>
 <br>
+
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">Global Info</ion-title>
     </ion-toolbar>
   </ion-header>
-  <ion-card>
-      <ion-grid>
-        <ion-row>
-          <ion-col>
-            <div>
-              <ion-img style="margin-top: 1em;" src="./assets/mask.svg"></ion-img>
-            </div>
-          </ion-col>
-          <ion-col>
-            <div>
-              <ion-card-header>
-              <ion-card-subtitle>Global</ion-card-subtitle>
-              <ion-card-title>Coronavirus cases</ion-card-title>
-            </ion-card-header>
-            <ion-card-content>
-              <h1>{{info?.cases | number}}</h1>
-            </ion-card-content>
-            </div>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-  </ion-card>
 
-  <ion-card>
-    <ion-grid>
-      <ion-row>
-        <ion-col>
-          <div>
-            <ion-img src="./assets/tombstone.svg"></ion-img>
-          </div>
-        </ion-col>
-        <ion-col>
-          <div>
-            <ion-card-header>
-              <ion-card-subtitle>Global</ion-card-subtitle>
-              <ion-card-title>Deaths</ion-card-title>
-            </ion-card-header>
-            <ion-card-content>
-              <h1>{{info?.deaths | number}}</h1>
-            </ion-card-content>
-          </div>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-</ion-card>
+  <!-- TOP slide of info cards -->
+  <ion-slides [options]="sliderconfig">
 
-<ion-card>
-  <ion-grid>
-    <ion-row>
-      <ion-col>
-        <div>
-          <ion-img src="./assets/heart.svg"></ion-img>
-        </div>
-      </ion-col>
-      <ion-col>
-        <div>
-          <ion-card-header>
-            <ion-card-subtitle>Global</ion-card-subtitle>
-            <ion-card-title>Recovered</ion-card-title>
-          </ion-card-header>
-          <ion-card-content>
-            <h1>{{info?.recovered | number}}</h1>
-          </ion-card-content>
-        </div>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
-</ion-card>
+    <ion-slide>
+      <ion-card color="warning">
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <div>
+                <ion-img src="./assets/mask.svg"></ion-img>
+              </div>
+            </ion-col>
+            <ion-col>
+              <div>
+                <ion-card-header>
+                  <ion-card-subtitle>Global</ion-card-subtitle>
+                  <ion-card-title>Confirmed</ion-card-title>
+                </ion-card-header>
+                <ion-card-content>
+                  <h1>{{info?.cases | number}}</h1>
+                </ion-card-content>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card color="success">
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <div>
+                <ion-img src="./assets/heart.svg"></ion-img>
+              </div>
+            </ion-col>
+            <ion-col>
+              <div>
+                <ion-card-header>
+                  <ion-card-subtitle>Global</ion-card-subtitle>
+                  <ion-card-title>Recovered</ion-card-title>
+                </ion-card-header>
+                <ion-card-content>
+                  <h1>{{info?.recovered | number}}</h1>
+                </ion-card-content>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card color="danger">
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <div>
+                <ion-img src="./assets/tombstone.svg"></ion-img>
+              </div>
+            </ion-col>
+            <ion-col>
+              <div>
+                <ion-card-header>
+                  <ion-card-subtitle>Global</ion-card-subtitle>
+                  <ion-card-title>Deaths</ion-card-title>
+                </ion-card-header>
+                <ion-card-content>
+                  <h1>{{info?.deaths | number}}</h1>
+                </ion-card-content>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card>
+    </ion-slide>
+
+  </ion-slides>
+</ion-content>
