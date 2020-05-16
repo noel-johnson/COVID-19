@@ -2,7 +2,7 @@
 A Cross-platform application to track current coronavirus cases all over the World
 
 ## Preview
-<img src="/images/ss1.jpg" width="200"> <img src="/images/ss2.jpg" width="200">
+<img src="/images/ss1.png" width="200"> <img src="/images/ss2.png" width="200"> <img src="/images/ss3.png" width="200">
 
 ## Getting started
 Use `git clone` to clone the repository.
