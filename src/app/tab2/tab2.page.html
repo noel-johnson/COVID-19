@@ -23,9 +23,10 @@
         <p></p>
         <p></p>
         <p>
-          <b>Cases:</b> {{country.cases | number}} | Today: {{country.todayCases | number}} | Active: {{country.active | number}}<br>
-          <b> Deaths:</b> {{country.deaths | number}} | Today: {{country.todayDeaths | number}}<br>
-          <b>Recovered:</b> {{country.recovered | number}} | Critical {{country.critical | number}}
+          <span *ngIf="country?.cases" style="color: #FFD534;"> <b>Cases:</b> {{country.cases | number}}<br> </span>
+          <span *ngIf="country?.recovered" style="color: #2FDF75;"> <b>Recovered:</b> {{country.recovered | number}} <br> </span>
+          <span *ngIf="country?.deaths" style="color: #FF4961;"> <b> Deaths:</b> {{country.deaths | number}}</span>
+          
         </p>
       </ion-label>
     </ion-item>

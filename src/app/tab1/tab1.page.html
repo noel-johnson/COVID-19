@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Global Info
+      COVID-19
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -10,7 +10,7 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Global Info</ion-title>
+      <ion-title size="large">COVID-19</ion-title>
     </ion-toolbar>
   </ion-header>
 
@@ -18,7 +18,7 @@
   <ion-slides [options]="sliderconfig">
 
     <ion-slide>
-      <ion-card color="warning">
+      <ion-card color="warning" style="width: 100%;" mode="md">
         <ion-grid>
           <ion-row>
             <ion-col>
@@ -43,7 +43,7 @@
     </ion-slide>
 
     <ion-slide>
-      <ion-card color="success">
+      <ion-card color="success" style="width: 100%;" mode="md">
         <ion-grid>
           <ion-row>
             <ion-col>
@@ -68,12 +68,13 @@
     </ion-slide>
 
     <ion-slide>
-      <ion-card color="danger">
+      <ion-card color="danger" style="width: 100%;" mode="md">
         <ion-grid>
           <ion-row>
             <ion-col>
               <div>
-                <ion-img src="./assets/tombstone.svg"></ion-img>
+                <ion-img  src="./assets/tombstone.svg"></ion-img>
+                <!-- <svg src="/src/assets/tombstone.svg"></svg> -->
               </div>
             </ion-col>
             <ion-col>
@@ -93,4 +94,36 @@
     </ion-slide>
 
   </ion-slides>
+
+  <ion-card style="margin-left: 1rem; margin-right: 1rem; margin-top: 2rem;">
+    <ion-card-content>
+      <canvas baseChart
+    [data]="doughnutChartData"
+    [labels]="doughnutChartLabels"
+    [chartType]="doughnutChartType"
+    [colors]="doughnutColors"
+    [options]="doughnutChartOptions">
+      
+    </canvas>
+    <br>
+    Tap for more info. <br>
+    Data source: JHU [https://systems.jhu.edu/]
+    </ion-card-content>
+    
+  </ion-card>
+
+  <ion-list *ngIf="information" lines="none" style="margin-top: 1rem; margin-bottom: 2rem;">
+    <ion-item button [routerLink]="['/','tabs','tab2',information.country]" detail="true">
+      <ion-label style="text-align: center;">
+        <h1>{{information.country}}</h1>
+        
+        <p style="margin-top: 10px;">
+          <span style="color: #FFD534;"> <b>Cases:</b> {{information.cases | number}} </span> &nbsp; &nbsp;
+          <span style="color: #2FDF75;"> <b>Recovered:</b> {{information.recovered | number}} </span> &nbsp; &nbsp;
+          <span style="color: #FF4961;"> <b> Deaths:</b>  {{information.deaths | number}}</span>
+        </p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
 </ion-content>

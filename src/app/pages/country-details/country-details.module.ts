@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { CountryDetailsPageRoutingModule } from './country-details-routing.module';
 
 import { CountryDetailsPage } from './country-details.page';
+import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    CountryDetailsPageRoutingModule
+    CountryDetailsPageRoutingModule,
+    ChartsModule
   ],
   declarations: [CountryDetailsPage]
 })

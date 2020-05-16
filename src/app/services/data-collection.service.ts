@@ -10,6 +10,8 @@ export class DataCollectionService {
 
   apiUrl = 'https://coronavirus-19-api.herokuapp.com/';
 
+
+
   constructor(private http: HttpClient) { }
 
   getAll() {
@@ -22,4 +24,6 @@ export class DataCollectionService {
   getCountryDetails(name){
     return this.http.get(`${this.apiUrl}countries/${name}`);
   }
+
 }
+ 
