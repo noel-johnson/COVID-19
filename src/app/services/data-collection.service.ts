@@ -10,7 +10,7 @@ export class DataCollectionService {
 
   apiUrl = 'https://coronavirus-19-api.herokuapp.com/';
 
-
+  graphUrl = "https://corona.lmao.ninja/v2/historical/india?lastdays=30";
 
   constructor(private http: HttpClient) { }
 
@@ -25,5 +25,9 @@ export class DataCollectionService {
     return this.http.get(`${this.apiUrl}countries/${name}`);
   }
 
+  getGraphData(){
+    return this.http.get(`${this.graphUrl}`);
+  }
+  
 }
  

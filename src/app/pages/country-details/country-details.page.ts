@@ -11,8 +11,14 @@ import { Label, Color } from 'ng2-charts';
 })
 export class CountryDetailsPage implements OnInit {
   information = null;
-  
+  graph = null;
 
+  lineCasesData : ChartDataSets[] =[];
+  lineDeathsData : ChartDataSets[] =[];
+  lineRecoveredData : ChartDataSets[] =[];
+
+  lineLabel : Label[] =[];
+Type: ChartType = 'line';
   constructor(private activatedRoute: ActivatedRoute, private dataService: DataCollectionService) { 
     
 
@@ -25,6 +31,29 @@ export class CountryDetailsPage implements OnInit {
       this.information = result;
 
     });
+
+    this.dataService.getGraphData().subscribe(result=>{
+      this.graph = result
+      // console.log(Object.keys(this.graph['timeline']['cases']));
+      var confirmed :any = Object.entries(this.graph['timeline']['cases'])
+      var deaths: any = Object.entries(this.graph['timeline']['deaths'])
+      var recovered: any = Object.entries(this.graph['timeline']['recovered'])
+
+      // this.data[0].data=[];
+      // this.data[0].data.push(g);
+      for(let i=0; i<30;++i){
+        this.lineLabel.push(confirmed[i][0]);
+        this.lineCasesData.push(confirmed[i][1]);
+        this.lineDeathsData.push(deaths[i][1]);
+        this.lineRecoveredData.push(recovered[i][1]);
+        // console.log(this.label);
+        // this.label.push(g[0][i]);
+      }
+      
+      console.log(this.lineRecoveredData);
+      console.log(this.lineLabel);
+    })
+
   } 
   
 }
