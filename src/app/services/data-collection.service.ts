@@ -10,6 +10,9 @@ export class DataCollectionService {
   graphUrl = "https://corona.lmao.ninja/v2/historical/";
   graphWorldUrl = "https://corona.lmao.ninja/v2/historical/all";
 
+  statesUrlUS ="https://corona.lmao.ninja/v2/states?sort&yesterday";
+  statesUrlIndia="https://api.covid19india.org/data.json";
+
   constructor(private http: HttpClient) {}
 
   getAll() {
@@ -29,5 +32,13 @@ export class DataCollectionService {
 
   getGraphDataWorld() {
     return this.http.get(`${this.graphWorldUrl}`);
+  }
+
+  getstatesDataUS(){
+    return this.http.get(`${this.statesUrlUS}`);
+  }
+
+  getstatesDataIN(){
+    return this.http.get(`${this.statesUrlIndia}`);
   }
 }

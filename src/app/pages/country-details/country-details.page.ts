@@ -12,7 +12,13 @@ import { Label, Color } from "ng2-charts";
 export class CountryDetailsPage implements OnInit {
   information = null;
   graph = null;
+  statesData= null;
+
   contentData: any;
+  searchState: any;
+
+  showDetails = false;
+  showStates = false;
 
   // Doughnut Chart
   doughnutChartData: ChartDataSets[] = [];
@@ -100,7 +106,8 @@ export class CountryDetailsPage implements OnInit {
     },
   ];
   // Charts end
-  showDetails = false;
+
+
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -150,5 +157,19 @@ export class CountryDetailsPage implements OnInit {
         }
       });
     }
+
+    if (name == "India"){
+      this.dataService.getstatesDataIN().subscribe((result)=>{
+        this.statesData = result['statewise'];
+      });
+    }
+
+    if(name=="USA"){
+      this.dataService.getstatesDataUS().subscribe((result)=>{
+        this.statesData= result;
+      })
+    }
+    
+
   }
 }

@@ -86,5 +86,33 @@
     </ion-card-content>
   </ion-card>
 
+  <!-- Show States -->
+  <ion-list lines="none" *ngIf="information?.country=='India'||information?.country=='USA'" class="chart">
+    <ion-item>
+      <ion-label>Show States</ion-label>
+      <ion-toggle [(ngModel)]="showStates"></ion-toggle>
+    </ion-item>
+  </ion-list>
+
+<div *ngIf="showStates">
+  <ion-list *ngFor="let state of statesData " >
+    <ion-item *ngIf="state.state!='Total'">
+      <ion-label>
+        <h1>{{state?.state}}</h1>
+        <p></p>
+        <p></p>
+        <p>
+          <span *ngIf="state?.confirmed" style="color: #FFD534;"> <b>Cases:</b> {{state.confirmed | number}}<br> </span>
+          <span *ngIf="state?.cases" style="color: #FFD534;"> <b>Cases:</b> {{state.cases | number}}<br> </span>
+          <span *ngIf="state.recovered" style="color: #2FDF75;"> <b>Recovered:</b> {{state.recovered | number}}
+            <br> </span>
+          <span *ngIf="state?.deaths" style="color: #FF4961;"> <b> Deaths:</b> {{state.deaths | number}} <br></span>
+            <span *ngIf="state?.lastupdatedtime">Last updated: {{state.lastupdatedtime}}</span>
+        </p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</div>
+  
 
 </ion-content>
