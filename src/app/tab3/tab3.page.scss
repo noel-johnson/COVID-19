@@ -2,11 +2,23 @@ ion-content ion-toolbar {
   --background: translucent;
 }
 
-.heart{
-  color:#e25555;
+.heart {
+  color: #e25555;
 }
 
-.made{
+.made {
   text-align: center;
   color: #fff;
+}
+
+ion-card {
+  border-radius: 10px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+ion-button {
+  --border-color: #7a49a5;
+  --ripple-color: #7a49a5;
+  --color: #7a49a5;
 }

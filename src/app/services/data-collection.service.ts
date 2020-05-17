@@ -1,33 +1,33 @@
-import { HttpClient} from '@angular/common/http';
-import { Injectable } from '@angular/core';
-
-
+import { HttpClient } from "@angular/common/http";
+import { Injectable } from "@angular/core";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root",
 })
 export class DataCollectionService {
+  apiUrl = "https://coronavirus-19-api.herokuapp.com/";
 
-  apiUrl = 'https://coronavirus-19-api.herokuapp.com/';
+  graphUrl = "https://corona.lmao.ninja/v2/historical/";
+  graphWorldUrl = "https://corona.lmao.ninja/v2/historical/all";
 
-  graphUrl = "https://corona.lmao.ninja/v2/historical/india?lastdays=30";
-
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   getAll() {
-    return this.http.get(`${this.apiUrl}all`, );
+    return this.http.get(`${this.apiUrl}all`);
   }
 
   getCountries() {
     return this.http.get(`${this.apiUrl}countries`);
   }
-  getCountryDetails(name){
+  getCountryDetails(name) {
     return this.http.get(`${this.apiUrl}countries/${name}`);
   }
 
-  getGraphData(){
-    return this.http.get(`${this.graphUrl}`);
+  getGraphData(name) {
+    return this.http.get(`${this.graphUrl}${name}?lastdays=30`);
   }
-  
+
+  getGraphDataWorld() {
+    return this.http.get(`${this.graphWorldUrl}`);
+  }
 }
- 

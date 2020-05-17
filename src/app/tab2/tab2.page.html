@@ -24,11 +24,114 @@
         <p></p>
         <p>
           <span *ngIf="country?.cases" style="color: #FFD534;"> <b>Cases:</b> {{country.cases | number}}<br> </span>
-          <span *ngIf="country?.recovered" style="color: #2FDF75;"> <b>Recovered:</b> {{country.recovered | number}} <br> </span>
+          <span *ngIf="country?.recovered" style="color: #2FDF75;"> <b>Recovered:</b> {{country.recovered | number}}
+            <br> </span>
           <span *ngIf="country?.deaths" style="color: #FF4961;"> <b> Deaths:</b> {{country.deaths | number}}</span>
-          
+
         </p>
       </ion-label>
     </ion-item>
   </ion-list>
+
+  <!-- Skeleton -->
+
+  <ion-list id="skeleton">
+    <ion-item>
+      <ion-label>
+        <h1>
+          <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+        </h1>
+        <p>
+          <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+        </p>
+        <p>
+          <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+        </p>
+        <p>
+          <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+        </p>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <h1>
+          <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+        </h1>
+        <p>
+          <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+        </p>
+        <p>
+          <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+        </p>
+        <p>
+          <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+        </p>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <h1>
+          <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+        </h1>
+        <p>
+          <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+        </p>
+        <p>
+          <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+        </p>
+        <p>
+          <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+        </p>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <h1>
+          <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+        </h1>
+        <p>
+          <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+        </p>
+        <p>
+          <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+        </p>
+        <p>
+          <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+        </p>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <h1>
+          <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+        </h1>
+        <p>
+          <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+        </p>
+        <p>
+          <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+        </p>
+        <p>
+          <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+        </p>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <h1>
+          <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+        </h1>
+        <p>
+          <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+        </p>
+        <p>
+          <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+        </p>
+        <p>
+          <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+        </p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
 </ion-content>

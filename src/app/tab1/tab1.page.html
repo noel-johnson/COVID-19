@@ -73,7 +73,7 @@
           <ion-row>
             <ion-col>
               <div>
-                <ion-img  src="./assets/tombstone.svg"></ion-img>
+                <ion-img src="./assets/tombstone.svg"></ion-img>
               </div>
             </ion-col>
             <ion-col>
@@ -94,32 +94,28 @@
 
   </ion-slides>
 
-  <ion-card style="margin-left: 1rem; margin-right: 1rem; margin-top: 2rem;">
+  <ion-card style="margin-left: 1rem; margin-right: 1rem; margin-top: 1rem;">
     <ion-card-content>
-      <canvas baseChart
-    [data]="doughnutChartData"
-    [labels]="doughnutChartLabels"
-    [chartType]="doughnutChartType"
-    [colors]="doughnutColors"
-    [options]="doughnutChartOptions">
-      
-    </canvas>
-    <br>
-    Tap for more info. <br>
-    Data source: JHU [https://systems.jhu.edu/]
+      <canvas baseChart [data]="doughnutChartData" [labels]="doughnutChartLabels" [chartType]="doughnutChartType"
+        [colors]="doughnutColors" [options]="doughnutChartOptions">
+
+      </canvas>
+      <br>
+      Tap for more info. <br>
+      Data source: JHU [https://systems.jhu.edu/]
     </ion-card-content>
-    
+
   </ion-card>
 
-  <ion-list *ngIf="information" lines="none" style="margin-top: 1rem; margin-bottom: 2rem;">
+  <ion-list *ngIf="information" lines="none" style="margin-top: 1rem;">
     <ion-item button [routerLink]="['/','tabs','tab2',information.country]" detail="true">
       <ion-label style="text-align: center;">
         <h1>{{information.country}}</h1>
-        
+
         <p style="margin-top: 10px;">
           <span style="color: #FFD534;"> <b>Cases:</b> {{information.cases | number}} </span> &nbsp; &nbsp;
           <span style="color: #2FDF75;"> <b>Recovered:</b> {{information.recovered | number}} </span> &nbsp; &nbsp;
-          <span style="color: #FF4961;"> <b> Deaths:</b>  {{information.deaths | number}}</span>
+          <span style="color: #FF4961;"> <b> Deaths:</b> {{information.deaths | number}}</span>
         </p>
       </ion-label>
     </ion-item>

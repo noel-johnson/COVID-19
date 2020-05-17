@@ -11,6 +11,7 @@ import { AppComponent } from './app.component';
 
 import {HttpClientModule} from '@angular/common/http';
 
+
 import 'chartjs-plugin-zoom';
 
 @NgModule({
@@ -20,7 +21,7 @@ import 'chartjs-plugin-zoom';
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
   ],
   bootstrap: [AppComponent]
 })

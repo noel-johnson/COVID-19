@@ -1,8 +1,36 @@
-hr{
-    border-top: 1px solid white;
-    margin-bottom: -5px;
+hr {
+  border-top: 1px solid white;
+  margin-bottom: -5px;
 }
 
-ion-card{
-    border-radius: 10px;
+ion-card {
+  border-radius: 10px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.details {
+  animation: fadeInAnimation ease 1.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.chart {
+  animation: fadeInAnimation ease-in 0.7s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+ion-toggle {
+  --background-checked: #7a49a5;
+  --handle-background-checked: #572781;
 }
