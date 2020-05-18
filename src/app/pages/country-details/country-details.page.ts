@@ -108,7 +108,6 @@ export class CountryDetailsPage implements OnInit {
   // Charts end
 
 
-
   constructor(
     private activatedRoute: ActivatedRoute,
     private dataService: DataCollectionService

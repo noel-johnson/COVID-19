@@ -27,7 +27,6 @@
     "@ionic/angular": "^5.0.0",
     "@ionic/lab": "^3.1.2",
     "chart.js": "^2.9.3",
-    "chartjs-plugin-zoom": "^0.7.7",
     "core-js": "^2.5.4",
     "ng2-charts": "^2.3.0",
     "ng2-search-filter": "^0.5.1",

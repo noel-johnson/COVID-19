@@ -9,15 +9,28 @@
 
 <ion-content [fullscreen]="true">
 
-  <ion-card style="margin-top: 1rem; margin-left: 1rem; margin-right: 1rem;" class="chart">
-    <ion-card-content>
-      <h4 style="color: #fff; font-size: 1.25rem;"><b>Today: {{information?.todayCases}}</b></h4>
-
+  <ion-card style="margin-top: 1rem; margin-left: 1rem; margin-right: 1rem;" >
+    <ion-card-header style="text-align: center; padding: 0; padding-top: 10px; padding-bottom: 5px;">
+      <ion-card-title>Today</ion-card-title>
+    </ion-card-header>
+    <ion-card-content style="text-align: center;">
+      <ion-grid>
+        <ion-row>
+            <ion-col>
+              <h1 style="color: #fff;"><b>{{information?.todayCases}}</b></h1>
+              <h3 style="color: #fff;">Cases</h3>
+            </ion-col>
+            <ion-col>
+              <h1 style="color: #fff;"><b>{{information?.todayDeaths}}</b></h1>
+              <h3 style="color: #fff;">Deaths</h3>
+            </ion-col>
+        </ion-row>
+      </ion-grid>
     </ion-card-content>
   </ion-card>
 
   <ion-card *ngIf="information" mode="md" [(ngModel)]="contentData" ngDefaultControl
-    style="margin-left: 1rem; margin-right: 1rem; margin-top: 1rem;" class="chart">
+    style="margin-left: 1rem; margin-right: 1rem; margin-top: 1rem;" >
     <ion-card-content style="text-align: center;">
       <ion-grid>
         <ion-row>
@@ -37,14 +50,14 @@
     </ion-card-content>
   </ion-card>
 
+  
   <ion-card style="margin-top: 1rem;" *ngIf="contentData" class="chart">
     <ion-card-content>
       <canvas baseChart [data]="doughnutChartData" [labels]="doughnutChartLabels" [chartType]="doughnutChartType"
         [colors]="doughnutColors" [options]="doughnutChartOptions">
-
+        Data source: JHU [https://systems.jhu.edu/]
       </canvas>
       <br>
-      Tap for more info. <br>
       Data source: JHU [https://systems.jhu.edu/]
     </ion-card-content>
 
@@ -58,30 +71,41 @@
     </ion-item>
   </ion-list>
 
+<!-- ion slide -->
+
   <!-- Line Chart Details -->
-  <ion-card *ngIf="showDetails" class="details">
+  <ion-card *ngIf="showDetails" class="details" >
     <ion-card-content style="text-align: center;">
-      <canvas baseChart [data]="lineCasesData" [labels]="lineLabel" [chartType]="Type" [colors]="lineCasesColors"
+      <div>
+        <canvas baseChart [data]="lineCasesData" [labels]="lineLabel" [chartType]="Type" [colors]="lineCasesColors"
         [options]="lineChartOptions">
+        Cases(30days)
       </canvas>
+      </div>
       Cases(30days)
     </ion-card-content>
   </ion-card>
 
   <ion-card *ngIf="showDetails" class="details">
     <ion-card-content style="text-align: center;">
-      <canvas baseChart [data]="lineDeathsData" [labels]="lineLabel" [chartType]="Type" [colors]="lineDeathsColors"
+      <div>
+        <canvas baseChart [data]="lineDeathsData" [labels]="lineLabel" [chartType]="Type" [colors]="lineDeathsColors"
         [options]="lineChartOptions">
+        Deaths(30days)
       </canvas>
+      </div>
       Deaths(30days)
     </ion-card-content>
   </ion-card>
 
   <ion-card *ngIf="showDetails" class="details">
     <ion-card-content style="text-align: center;">
-      <canvas baseChart [data]="lineRecoveredData" [labels]="lineLabel" [chartType]="Type"
+      <div>
+        <canvas baseChart [data]="lineRecoveredData" [labels]="lineLabel" [chartType]="Type"
         [colors]="lineRecoveredColors" [options]="lineChartOptions">
+        Recovered(30days)
       </canvas>
+      </div>
       Recovered(30days)
     </ion-card-content>
   </ion-card>
