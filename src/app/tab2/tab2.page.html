@@ -16,22 +16,22 @@
     <ion-searchbar [(ngModel)]="searchCountry" autocomplete="off"></ion-searchbar>
   </ion-toolbar>
 
-  <ion-list *ngFor="let country of countries | filter:searchCountry">
-    <ion-item button [routerLink]="['/','tabs','tab2',country.country]" detail="true">
-      <ion-label>
-        <h1>{{country.country}}</h1>
-        <p></p>
-        <p></p>
-        <p>
-          <span *ngIf="country?.cases" style="color: #FFD534;"> <b>Cases:</b> {{country.cases | number}}<br> </span>
-          <span *ngIf="country?.recovered" style="color: #2FDF75;"> <b>Recovered:</b> {{country.recovered | number}}
-            <br> </span>
-          <span *ngIf="country?.deaths" style="color: #FF4961;"> <b> Deaths:</b> {{country.deaths | number}}</span>
-
-        </p>
-      </ion-label>
-    </ion-item>
-  </ion-list>
+    <ion-list *ngFor="let country of countries | filter:searchCountry">
+      <ion-item button [routerLink]="['/','tabs','tab2',country.country]" detail="true">
+        <ion-label>
+          <h1>{{country.country}}</h1>
+          <p></p>
+          <p></p>
+          <p>
+            <span *ngIf="country?.cases" style="color: #FFD534;"> <b>Cases:</b> {{country.cases | number}}<br> </span>
+            <span *ngIf="country?.recovered" style="color: #2FDF75;"> <b>Recovered:</b> {{country.recovered | number}}
+              <br> </span>
+            <span *ngIf="country?.deaths" style="color: #FF4961;"> <b> Deaths:</b> {{country.deaths | number}}</span>
+  
+          </p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
 
   <!-- Skeleton -->
 
