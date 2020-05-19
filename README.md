@@ -1,6 +1,5 @@
 # COVID-19 Tracker
 A Cross-platform application to track current coronavirus cases all over the World. It shows state details for India and US.
-<br/>
 *Complete with graphs for nerding it out* :smiley:
 
 ## Preview
