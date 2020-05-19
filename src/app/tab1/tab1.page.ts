@@ -7,6 +7,7 @@ import { Dialogs } from '@ionic-native/dialogs/ngx';
 import { Plugins } from '@capacitor/core';
 
 const {SplashScreen} = Plugins; 
+const { Toast } = Plugins;
 
 @Component({
   selector: "app-tab1",
@@ -73,6 +74,9 @@ export class Tab1Page {
     });
 
     this.network.onConnect().subscribe(()=>{
+      Toast.show({
+        text: 'Connected'
+      });
       setTimeout(() => {
         this.loadData();
       }, 2000);

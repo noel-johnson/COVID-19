@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 import { Plugins } from '@capacitor/core';
 const { Toast } = Plugins;
 
-@Component({
+@Component({ 
   selector: 'app-root',
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss']
