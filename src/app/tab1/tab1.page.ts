@@ -2,6 +2,11 @@ import { Component } from "@angular/core";
 import { DataCollectionService } from "../services/data-collection.service";
 import { ChartDataSets, ChartType } from "chart.js";
 import { Label, Color } from "ng2-charts";
+import { Network } from '@ionic-native/network/ngx';
+import { Dialogs } from '@ionic-native/dialogs/ngx';
+import { Plugins } from '@capacitor/core';
+
+const {SplashScreen} = Plugins; 
 
 @Component({
   selector: "app-tab1",
@@ -9,6 +14,12 @@ import { Label, Color } from "ng2-charts";
   styleUrls: ["tab1.page.scss"],
 })
 export class Tab1Page {
+
+  componentDidLoad(){
+    SplashScreen.hide();
+  }
+
+
   info: any = null; //For storing the data for the view
 
   // Chartjs Doughnout chart
@@ -54,8 +65,22 @@ export class Tab1Page {
   // from tabs2
   information: any = null;
 
-  constructor(private dataService: DataCollectionService) {
-    this.dataService.getAll().subscribe((data) => {
+  constructor(public dataService: DataCollectionService, public network:Network,private dialog: Dialogs) {
+    this.loadData();
+
+    this.network.onDisconnect().subscribe(()=>{
+      this.dialog.alert('Active internet connection is needed for latest data');
+    });
+
+    this.network.onConnect().subscribe(()=>{
+      setTimeout(() => {
+        this.loadData();
+      }, 2000);
+    });
+  }
+
+  loadData(refresher?){
+    this.dataService.getAll() .subscribe((data) => {
       this.info = data;
 
       this.doughnutChartData = [];
@@ -69,5 +94,17 @@ export class Tab1Page {
     this.dataService.getCountryDetails("India").subscribe((data) => {
       this.information = data;
     });
+
+    if(this.info&&this.information){
+      console.log("refreshed");
+      setTimeout(()=>{
+        refresher.target.complete();
+      },2000);
+    }
+   
+  }
+
+  forceReload(refresher){
+    this.loadData(refresher);
   }
 }

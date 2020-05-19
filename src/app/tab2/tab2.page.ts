@@ -9,10 +9,12 @@ import { DataCollectionService } from '../services/data-collection.service';
 export class Tab2Page {
   countries: any = null;
   searchCountry: any;
+  contentLoaded = true;
   constructor(private dataService: DataCollectionService) {
 
     this.dataService.getCountries().subscribe((data) => {
       this.countries = data;
+      this.contentLoaded = false;
     });
   }
 }

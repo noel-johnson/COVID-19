@@ -16,7 +16,7 @@
     <ion-searchbar [(ngModel)]="searchCountry" autocomplete="off"></ion-searchbar>
   </ion-toolbar>
 
-    <ion-list *ngFor="let country of countries | filter:searchCountry">
+    <ion-list *ngFor="let country of countries | filter:searchCountry" [(ngModel)]="contentLoaded" ngDefaultControl>
       <ion-item button [routerLink]="['/','tabs','tab2',country.country]" detail="true">
         <ion-label>
           <h1>{{country.country}}</h1>
@@ -34,8 +34,7 @@
     </ion-list>
 
   <!-- Skeleton -->
-
-  <ion-list id="skeleton">
+  <ion-list id="skeleton" *ngIf="contentLoaded">
     <ion-item>
       <ion-label>
         <h1>

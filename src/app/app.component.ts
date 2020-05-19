@@ -1,6 +1,6 @@
 import { Component, ViewChildren, QueryList, OnDestroy } from '@angular/core';
 
-import { Platform, IonRouterOutlet } from '@ionic/angular';
+import { Platform, IonRouterOutlet, NavController } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { Router } from '@angular/router';
@@ -25,7 +25,8 @@ export class AppComponent implements OnDestroy {
     private platform: Platform,
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
-    public router: Router
+    public router: Router,
+    private navCtrl: NavController
   ) {
     this.initializeApp();
   }
@@ -49,10 +50,16 @@ export class AppComponent implements OnDestroy {
             this.showToast('Press back again to exit App.');
             this.lastTimeBackPress = new Date().getTime();
           }
+        }else if(this.router.url === '/tabs/tab2'){
+          this.router.navigateByUrl('',{ skipLocationChange: true })
+        }else if(this.router.url === '/tabs/tab3'){
+          this.router.navigateByUrl('',{ skipLocationChange: true })
         }
       });
     });
   }
+
+ 
   async showToast(msg) {
     await Toast.show({
       text: msg
