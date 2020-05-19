@@ -5,13 +5,16 @@ import { Injectable } from "@angular/core";
   providedIn: "root",
 })
 export class DataCollectionService {
-  apiUrl = "https://coronavirus-19-api.herokuapp.com/";
 
-  graphUrl = "https://corona.lmao.ninja/v2/historical/";
-  graphWorldUrl = "https://corona.lmao.ninja/v2/historical/all";
+  /* Get the api's you want and put it in the variables like 'https:/,,,' 
+  */
+  apiUrl = true;
 
-  statesUrlUS ="https://corona.lmao.ninja/v2/states?sort&yesterday";
-  statesUrlIndia="https://api.covid19india.org/data.json";
+  graphUrl = true;
+  graphWorldUrl = true;
+
+  statesUrlUS =true;
+  statesUrlIndia=true;
 
   constructor(private http: HttpClient) {}
 
