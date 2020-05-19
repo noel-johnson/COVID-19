@@ -6,7 +6,7 @@ import { Injectable } from "@angular/core";
 })
 export class DataCollectionService {
 
-  /* Get the api's you want and put it in the variables like 'https:/,,,' 
+  /* Get the api's you want and put it in the variables like 'https:/...' 
   */
  apiUrl = true;
 
