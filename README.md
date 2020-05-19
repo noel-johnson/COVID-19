@@ -1,8 +1,10 @@
 # COVID-19 Tracker
-A Cross-platform application to track current coronavirus cases all over the World
+A Cross-platform application to track current coronavirus cases all over the World. It shows state details for India and US.
+*Complete with graphs for nerding it out* :smiley:
 
 ## Preview
 <img src="/images/ss1.png" width="200"> <img src="/images/ss2.png" width="200"> <img src="/images/ss3.png" width="200">
+<img src="/images/ss4.png" width="200"> <img src="/images/ss5.png" width="200"> <img src="/images/ss6.png" width="200">
 
 ## Getting started
 Use `git clone` to clone the repository.*
@@ -57,12 +59,21 @@ $ npm install --save @capacitor/core @capacitor/cli
 - [Android Studio](https://developer.android.com/studio/)
 - [Gradle](https://gradle.org/)
 
-## Built With
+
+### Built With
 * [Ionic Framework 5](https://ionicframework.com/) - Open-source SDK for hybrid mobile app development
 * [Capacitor](https://capacitor.ionicframework.com/) - The Native Bridge for Cross-Platform Web Apps
 
+
 ## Author
 * **Noel Johnson** 
+
+
+## API's used 
+`https://github.com/NovelCOVID/API` <br/>
+`https://github.com/covid19india/api` <br/>
+`https://coronavirus-19-api.herokuapp.com/all`
+
 
 ## Contributing
 **Request a feature** <br>
@@ -72,10 +83,8 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 ### Acknowledgments
 * www.worldometers.info
+* [puf17640](https://github.com/puf17640) for the API
+* [covid19india](https://github.com/covid19india) for the Indian API
 * Inspired by javieraviles
+
 * Icons made by [Freepik](https://www.flaticon.com/authors/freepik)
-
-## Using
-Please give credits if using this project :+1:
-
-
