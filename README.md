@@ -16,7 +16,7 @@ Run `npm install` to install all necessary packages.
 
 ### Environment
 
-To work on this repository, you need setup the following environment.
+To work on this repository, you need to setup the following environment.
 
 - [Node](https://nodejs.org) & [NPM](https://www.npmjs.com)
 
