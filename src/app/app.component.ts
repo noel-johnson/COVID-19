@@ -1,6 +1,6 @@
 import { Component, ViewChildren, QueryList, OnDestroy } from '@angular/core';
 
-import { Platform, IonRouterOutlet, NavController } from '@ionic/angular';
+import { Platform, IonRouterOutlet } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { Router } from '@angular/router';
@@ -26,7 +26,6 @@ export class AppComponent implements OnDestroy {
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
     public router: Router,
-    private navCtrl: NavController
   ) {
     this.initializeApp();
   }

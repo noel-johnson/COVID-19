@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+import { Plugins } from '@capacitor/core';
+
+const {SplashScreen} = Plugins; 
+
 
 @Component({
   selector: 'app-tabs',
@@ -6,7 +10,9 @@ import { Component } from '@angular/core';
   styleUrls: ['tabs.page.scss']
 })
 export class TabsPage {
-
+  componentDidLoad(){
+    SplashScreen.hide();
+  }
   constructor() { }
 
 }
