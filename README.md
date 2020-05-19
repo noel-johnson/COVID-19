@@ -1,8 +1,10 @@
 # COVID-19 Tracker
-A Cross-platform application to track current coronavirus cases all over the World
+A Cross-platform application to track current coronavirus cases all over the World. It shows state details for India and US.
+*complete with graphs for nerding it out* :smiley:
 
 ## Preview
 <img src="/images/ss1.png" width="200"> <img src="/images/ss2.png" width="200"> <img src="/images/ss3.png" width="200">
+<img src="/images/ss4.png" width="200"> <img src="/images/ss5.png" width="200"> <img src="/images/ss6.png" width="200">
 
 ## Getting started
 Use `git clone` to clone the repository.*
