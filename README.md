@@ -5,7 +5,9 @@ A Cross-platform application to track current coronavirus cases all over the Wor
 <img src="/images/ss1.png" width="200"> <img src="/images/ss2.png" width="200"> <img src="/images/ss3.png" width="200">
 
 ## Getting started
-Use `git clone` to clone the repository.
+Use `git clone` to clone the repository.*
+
+**Get the api's pass it to the respective objects in `data-collection.service.ts` file.**
 
 ## Installing
 Run `npm install` to install all necessary packages.
