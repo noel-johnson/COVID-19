@@ -8,13 +8,13 @@ export class DataCollectionService {
 
   /* Get the api's you want and put it in the variables like 'https:/,,,' 
   */
-  apiUrl = true;
+ apiUrl = "https://coronavirus-19-api.herokuapp.com/";
 
-  graphUrl = true;
-  graphWorldUrl = true;
+  graphUrl = "https://corona.lmao.ninja/v2/historical/";
+  graphWorldUrl = "https://corona.lmao.ninja/v2/historical/all";
 
-  statesUrlUS =true;
-  statesUrlIndia=true;
+  statesUrlUS ="https://corona.lmao.ninja/v2/states?sort&yesterday";
+  statesUrlIndia="https://api.covid19india.org/data.json";
 
   constructor(private http: HttpClient) {}
 
