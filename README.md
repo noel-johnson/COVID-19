@@ -70,9 +70,9 @@ $ npm install --save @capacitor/core @capacitor/cli
 
 
 ## API's used 
-`https://github.com/NovelCOVID/API` <br/>
-`https://github.com/covid19india/api` <br/>
-`https://coronavirus-19-api.herokuapp.com/all`
+[https://github.com/NovelCOVID/API](https://github.com/NovelCOVID/API) <br/>
+[https://github.com/covid19india/api](https://github.com/covid19india/api) <br/>
+[https://coronavirus-19-api.herokuapp.com/all](https://coronavirus-19-api.herokuapp.com/all)
 
 
 ## Contributing
