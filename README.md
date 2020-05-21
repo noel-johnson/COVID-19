@@ -73,18 +73,17 @@ $ npm install --save @capacitor/core @capacitor/cli
 * **Noel Johnson** 
 
 
-## API's used 
-NovelCOVID API: [https://github.com/NovelCOVID/API](https://github.com/NovelCOVID/API) <br/>
-COVID19-India API: [https://github.com/covid19india/api](https://github.com/covid19india/api)
-
-
-## Contributing
+### Contributing
 **Request a feature** <br>
 You can also request for a feature [here](https://github.com/noel3225/COVID-19/issues/new), and if it's viable, it will be picked for development.
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-### Acknowledgments
+### API's used 
+NovelCOVID API: [https://github.com/NovelCOVID/API](https://github.com/NovelCOVID/API) <br/>
+COVID19-India API: [https://github.com/covid19india/api](https://github.com/covid19india/api)
+
+#### Acknowledgments
 * www.worldometers.info
 * [puf17640](https://github.com/puf17640) for the API
 * [covid19india](https://github.com/covid19india) for the Indian API
