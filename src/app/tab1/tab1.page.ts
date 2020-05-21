@@ -89,7 +89,7 @@ export class Tab1Page {
 
       this.doughnutChartData = [];
 
-      this.doughnutChartData.push(data["cases"]);
+      this.doughnutChartData.push(data["active"]);
       this.doughnutChartData.push(data["recovered"]);
       this.doughnutChartData.push(data["deaths"]);
     });
