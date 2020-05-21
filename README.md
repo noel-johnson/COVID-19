@@ -2,6 +2,9 @@
 A Cross-platform application to track current coronavirus cases all over the World. It shows state details for India and US.
 *Complete with graphs for nerding it out* :smiley:
 
+Progressive Web APP:-
+https://covid-19-pwa-ed45f.web.app/
+
 ## Preview
 <img src="/images/ss1.png" width="200"> <img src="/images/ss2.png" width="200"> <img src="/images/ss3.png" width="200">
 <img src="/images/ss4.png" width="200"> <img src="/images/ss5.png" width="200"> <img src="/images/ss6.png" width="200">
@@ -63,6 +66,7 @@ $ npm install --save @capacitor/core @capacitor/cli
 ### Built With
 * [Ionic Framework 5](https://ionicframework.com/) - Open-source SDK for hybrid mobile app development
 * [Capacitor](https://capacitor.ionicframework.com/) - The Native Bridge for Cross-Platform Web Apps
+* [Firebase](https://firebase.google.com/) -  Mobile and web application development platform (for deploy)
 
 
 ## Author
