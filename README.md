@@ -73,8 +73,10 @@ $ npm install --save @capacitor/core @capacitor/cli
 * **Noel Johnson** 
 
 
-### Contributing
-**Request a feature** <br>
+### Contributing 
+
+
+***Request a feature*** <br>
 You can also request for a feature [here](https://github.com/noel3225/COVID-19/issues/new), and if it's viable, it will be picked for development.
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
