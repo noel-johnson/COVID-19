@@ -120,7 +120,7 @@ export class CountryDetailsPage implements OnInit {
       this.contentData = true;
       this.doughnutChartData = [];
 
-      this.doughnutChartData.push(result["cases"]);
+      this.doughnutChartData.push(result["active"]);
       this.doughnutChartData.push(result["recovered"]);
       this.doughnutChartData.push(result["deaths"]);
     });
