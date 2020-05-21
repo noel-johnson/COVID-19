@@ -74,8 +74,8 @@ $ npm install --save @capacitor/core @capacitor/cli
 
 
 ## API's used 
-[https://github.com/NovelCOVID/API](https://github.com/NovelCOVID/API) <br/>
-[https://github.com/covid19india/api](https://github.com/covid19india/api)
+NovelCOVID API: [https://github.com/NovelCOVID/API](https://github.com/NovelCOVID/API) <br/>
+COVID19-India API: [https://github.com/covid19india/api](https://github.com/covid19india/api)
 
 
 ## Contributing
