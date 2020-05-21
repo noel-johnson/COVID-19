@@ -9,12 +9,7 @@ export class DataCollectionService {
   /* Get the api's you want and put it in the variables like 'https:/...' 
   */
  apiUrl = true;
-
-  graphUrl = true;
-  graphWorldUrl = true;
-
-  statesUrlUS =true;
-  statesUrlIndia=true;
+ statesUrlIndia=true;
 
   constructor(private http: HttpClient) {}
 
@@ -30,15 +25,15 @@ export class DataCollectionService {
   }
 
   getGraphData(name) {
-    return this.http.get(`${this.graphUrl}${name}?lastdays=30`);
+    return this.http.get(`${this.apiUrl}historical/${name}?lastdays=30`);
   }
 
   getGraphDataWorld() {
-    return this.http.get(`${this.graphWorldUrl}`);
+    return this.http.get(`${this.apiUrl}/historical/all`);
   }
 
   getstatesDataUS(){
-    return this.http.get(`${this.statesUrlUS}`);
+    return this.http.get(`${this.apiUrl}states?sort&yesterday`);
   }
 
   getstatesDataIN(){
